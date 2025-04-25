@@ -34,14 +34,13 @@
 -	gpg --keyserver keyserver.ubuntu.com --recv-keys <fingerprint last several character> - try to download it, if faled and no data the key is old, manipulated or bad ID.
 -	gpg --list-keys --with-fingerprint – check the keys if the date is too fresh it is suspicious
 
-#### Check packagefiles integrity:
+### Check packagefiles integrity:
 -	sudo apt install debsums
 -	sudo debsums -s   -   check the modificate or missing packagefiles, comparing their current checksums with the checksums stored in the package's metadata. The -s (or --silent): Only shows errors
 -	sudo debsums -a    -  verify the integrity of all files installed by Debian packages. Checks every file installed by .deb packages against their original checksums.
 -	sudo debsums -c  -  Only check config files (conffiles).
 -	sudo debsums -l    -  List all files that would be checked.
-
-### Best practice:
+#### Best practice:
 -	sudo debsums -as – check all packagefiles and show only FAILED
 -	sudo debsums -a | grep -i failed – check all packagefiles and show only FAILED case insesitive
 -	sudo debsums -a | grep „FAILED” - check all packagefiles and show only FAILED case sesitive

@@ -28,7 +28,7 @@
 #### Check the GPG all keys:
 -	for f in /usr/share/keyrings/*.gpg; do echo -e "\n--- $f ---"; gpg --no-default-keyring --keyring "$f" --list-keys; done
 
-##### **Check the UID and fingerprint – on official webpages**
+  ##### **Check the UID and fingerprint – on official webpages**
 
 #### Check the validation of GPG:
 -	gpg --keyserver keyserver.ubuntu.com --recv-keys <fingerprint last several character> - try to download it, if faled and no data the key is old, manipulated or bad ID.

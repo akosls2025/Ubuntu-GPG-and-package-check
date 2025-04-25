@@ -6,7 +6,7 @@
 -	apt-cache pkgnames  -   installed package names
 
 #### Checking a package to see if it comes from the official Ubuntu archive:
-500 - archive.ubuntu.com or security.ubuntu.com - original
+**500 - archive.ubuntu.com or security.ubuntu.com** - original
 -	apt-cache policy <package name> 
 
 #### Check source.list and source.list.d if we have vanilla install we compare it.
@@ -27,6 +27,7 @@
 
 #### Check the GPG all keys:
 -	for f in /usr/share/keyrings/*.gpg; do echo -e "\n--- $f ---"; gpg --no-default-keyring --keyring "$f" --list-keys; done
+  
  **Check the UID and fingerprint – on official webpages**
 
 #### Check the validation of GPG:
